@@ -1,7 +1,7 @@
 # crowdfundsample
 
 ## Installing
-1.  Get source code `git clone `
+1.  Get source code `git clone https://gitlab.com/sangopen/vechain-crowdfunding-sample.git`
 2.  Go to ethereum folder `cd ethereum`
 3.  Open web3.js in ethereum folder, update network field to point to VeChain network URL
 4.  Start web3-gear `web3-gear --endpoint {vechain network url}`
