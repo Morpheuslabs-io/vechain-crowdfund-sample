@@ -11,18 +11,32 @@ class CampaignNew extends Component {
     errorMessage: '',
     loading: false
   };
+  
+ enableThor = async () => {
+      try {
+        const [cometAccount] = await thor.enable();
+        return cometAccount;
+      } catch (e) {
+        console.log(`User rejected request ${e}`);
+        // handle error
+      }
+ }
 
   onSubmit = async event => {
     event.preventDefault();
+    
+    this.enableThor();
 
     this.setState({ loading: true, errorMessage: '' });
 
     try {
-      const accounts = await web3.eth.getAccounts();
+//      const accounts = await web3.eth.getAccounts();
+      const [currentAccount] = await web3.eth.getAccounts()
       await factory.methods
-        .createCampaign(this.state.minimumContribution, "Test creating campaign")
+        .createCampaign(this.state.minimumContribution, "Test campaign")
         .send({
-          from: accounts[0]
+          from: currentAccount,
+          gas: 3000000
         });
 
       Router.pushRoute('/');

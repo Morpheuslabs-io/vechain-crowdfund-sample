@@ -11,14 +11,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs": "0.0.1-security",
     "next": "^7.0.2",
     "next-routes": "^1.4.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "semantic-ui-react": "^0.84.0",
+    "thorify": "^1.0.6",
     "truffle-artifactor": "^4.0.3",
     "typedarray-to-buffer": "^3.1.5",
-    "web3": "^1.0.0-beta.40",
+    "web3": "1.0.0-beta.37",
     "yaeti": "^1.0.2"
   }
 }
