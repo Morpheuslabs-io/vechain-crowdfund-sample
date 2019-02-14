@@ -10,3 +10,5 @@
 7.  Go to root folder `cd ..`
 8.  Run install node modules `npm install`
 9.  Run node app `npm run dev`
+10. Install comet wallet on chrome `https://chrome.google.com/webstore/detail/comet/jpkkakbelpcambmhdcaoidiejaikiemn` to sign transaction
+
