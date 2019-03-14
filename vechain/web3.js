@@ -3,13 +3,23 @@ import { extend } from 'thorify/dist/extend'
 const Web3 = require("web3");
 
 let web3;
-const network = "http://bops-t.morpheuslabs.io:25549";
+const network = "http://127.0.0.1:8669";
+
+async function enableThor() {
+    try {
+      const [cometAccount] = await thor.enable();
+      return cometAccount;
+    } catch (e) {
+      console.log(`User rejected request ${e}`);
+      // handle error
+    }
+}
 
 if (typeof window !== 'undefined' && typeof window.thor !== 'undefined') {
     // We are in the browser and metamask is running. 
     web3 = new Web3(window.thor);
     extend(web3);
-    // enableThor();
+    enableThor();
     
 } else {
   // We are on the server *OR* the user is not running metamask

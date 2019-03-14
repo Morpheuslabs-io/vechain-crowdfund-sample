@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Message } from 'semantic-ui-react';
 import Layout from '../../components/Layout';
-import factory from '../../ethereum/factory';
-import web3 from '../../ethereum/web3';
+import factory from '../../vechain/factory';
+import web3 from '../../vechain/web3';
 import { Router } from '../../routes';
 
 class CampaignNew extends Component {
@@ -12,21 +12,10 @@ class CampaignNew extends Component {
     loading: false
   };
   
- enableThor = async () => {
-      try {
-        const [cometAccount] = await thor.enable();
-        return cometAccount;
-      } catch (e) {
-        console.log(`User rejected request ${e}`);
-        // handle error
-      }
- }
-
   onSubmit = async event => {
     event.preventDefault();
     
-    this.enableThor();
-
+    // this.enableThor();
     this.setState({ loading: true, errorMessage: '' });
 
     try {
