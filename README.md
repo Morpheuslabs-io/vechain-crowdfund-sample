@@ -14,10 +14,12 @@ A creator/entrepreneur can deploy a crowdfunding campaign with a name and a desc
 
 ### Technical Overview
 
-This sample Crowdfund application consists of a web application, smart contracts and crypto currency payments. The Web Application is implemented using React.js and Node.js. The smart contracts are written in Solidity. VeChain Tokens VET is used for raising fundThe crypto currency payment 
+This sample Crowdfund application consists of a web application, smart contracts and crypto currency payments. The Web Application is implemented using React.js and Node.js. The smart contracts are written in Solidity. VeChain wallet Comet and token VET are used for payment. Truffle is used for smart contract compilation and deployment. CDE of ML BPaaS (Morphesy Labs Blockchain Platform as a Service) is used as the integrated development for Web Application and smart contract development and testing together with VeChain Solo node on ML BPaaS. Once the web application and smart contracts have been tested on ML BPaaS, then the smart contracts can be deployed to testnet or mainnet from CDE of ML BPaaS. For more detailed info about ML BPaaS, refer to https://docs.morpheuslabs.io/docs.
 
-## Installing
-1.  Get source code `git clone https://gitlab.com/sangopen/vechain-crowdfunding-sample.git`
+Note that web3-gear is VeChain API proxy for web application to connect to the VeChain network node.
+
+## Exploring, customizing and testing the Application on ML BPaaS.
+1.  Download Sample Crowdfund application from Application Library. Deploy the application into a new workspace. Then start and open the workspace. Then you can use CDE to modify and test the application. Note that you can create a VeChain Solo node from Bloclchain Ops on ML BPaaS. You can refer to README in another Application VIP180 Web Version for the detailed configurations required to deployment the smart contracts and how to configure Comet.
 2.  Go to vechain folder `cd vechain-crowdfunding-sample/vechain`
 3.  Open web3.js in vechain folder, update network field to point to VeChain network URL
 4.  Start web3-gear `web3-gear --endpoint {vechain network url}`
@@ -26,5 +28,7 @@ This sample Crowdfund application consists of a web application, smart contracts
 7.  Go to root folder `cd ..`
 8.  Run install node modules `npm install`
 9.  Run node app `npm run dev`
-10. Install comet wallet on chrome `https://chrome.google.com/webstore/detail/comet/jpkkakbelpcambmhdcaoidiejaikiemn` to sign transaction
+10. Install comet wallet on chrome `https://chrome.google.com/webstore/detail/comet/jpkkakbelpcambmhdcaoidiejaikiemn` to sign transaction.
+
+The source of the original KickStart application: https://github.com/StephenGrider/EthereumCasts/tree/master/kickstart.
 
