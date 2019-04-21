@@ -21,14 +21,15 @@ Note that web3-gear is VeChain API proxy for web application to connect to the V
 ## Exploring, customizing and testing the Application on ML BPaaS.
 1.  Download Sample Crowdfund application from Application Library. Deploy the application into a new workspace. Then start and open the workspace. Then you can use CDE to modify and test the application. Note that you can create a VeChain Solo node from Bloclchain Ops on ML BPaaS. You can refer to README in another Application VIP180 Web Version for the detailed configurations required to deployment the smart contracts and how to configure Comet.
 2.  Go to vechain folder `cd vechain-crowdfunding-sample/vechain`
-3.  Open web3.js in vechain folder, update network field to point to VeChain network URL
+3.  Open web3.js in vechain folder, update network field to point to VeChain network URL (internal URL of the Solo node if you are using the Solo node on ML BPaaS)
 4.  Start web3-gear `web3-gear --endpoint {vechain network url}`
 5.  Deploy contracts to network `truffle migrate` or `truffle migrate --reset` if you want to redeployed again
 6.  Get CampaignCreator contract address and update to factory.js in vechain folder
 7.  Go to root folder `cd ..`
 8.  Run install node modules `npm install`
 9.  Run node app `npm run dev`
-10. Install comet wallet on chrome `https://chrome.google.com/webstore/detail/comet/jpkkakbelpcambmhdcaoidiejaikiemn` to sign transaction.
+10. Install Comet wallet on chrome `https://chrome.google.com/webstore/detail/comet/jpkkakbelpcambmhdcaoidiejaikiemn` to sign transaction.
+11. Configure the end point in the Comet wallet to the target network, e.g. testnet, mainnet, or the solo node on the ML BPaaS platform. You should use the external URL of the Solo node when you configure the custom end point to connect to the solo node. Refer to the ML BPaaS document to see how to find out internal and external URL of the Solo node : https://docs.morpheuslabs.io/docs/blockchain-networks.
 
 The source of the original KickStart application: https://github.com/StephenGrider/EthereumCasts/tree/master/kickstart.
 
