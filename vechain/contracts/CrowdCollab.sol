@@ -2,7 +2,7 @@ pragma solidity ^0.4.25;
 
 /**
  * @title Crowd fund smart contract, demonstration to solve problem of center crowd fund model
- * @author Duong Van Sang
+ * @author Morpheus Labs
  * @dev Crowd Colla is smart contract is contract that allow creators and entrepreneurs to get fund
  * from supporters for their project, and also let supporter join in approving their expense items
  */
