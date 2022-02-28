@@ -18,7 +18,7 @@ This sample Crowdfund application consists of a web application, smart contracts
 
 Note that web3-gear is VeChain API proxy for web application to connect to the VeChain network node.
 
-## Exploring, customizing and testing the Application on ML BPaaS.
+## Exploring, customizing and testing the Application on ML SEED.
 1.  Download Sample Crowdfund application from Application Library. Deploy the application into a new workspace. Then start and open the workspace. Then you can use CDE to modify and test the application. Note that you can create a VeChain Solo node from Bloclchain Ops on ML BPaaS. You can refer to README in another Application VIP180 Web Version for the detailed configurations required to deployment the smart contracts and how to configure Comet.
 2.  Go to vechain folder `cd vechain-crowdfunding-sample/vechain`
 3.  Open web3.js in vechain folder, update network field to point to VeChain network URL (internal URL of the Solo node if you are using the Solo node on ML BPaaS)
